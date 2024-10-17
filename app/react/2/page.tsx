@@ -1,7 +1,7 @@
 'use client'
 // useEffect vs useLayout
 
-import { useState } from "react"
+import { useState, useEffect, useLayoutEffect } from "react"
 
 export default function EffectLayout(): JSX.Element {
     const [dummy, setDummy] = useState(false)
@@ -20,7 +20,10 @@ export default function EffectLayout(): JSX.Element {
                     </header>
                     <div className = "flex flex-col gap-2">
                         <section>
-                            useEffect
+                            useEffect and useLayoutEffect are almost identical. They allow us to perform side effects 
+                            in function components, suited for tasks such as handling/fetching APIs. They follow the similar structure 
+                            where its ...effect(effect, deps) where effect is a function that is to run imperative. And the dependencies 
+                            are variables that when changed, trigger the effect to run. 
                         </section>
                         <button className = "btn btn-neutral border-black btn-xsm" onClick = {() => setDummy(!dummy)}>
                             Button
@@ -35,7 +38,11 @@ export default function EffectLayout(): JSX.Element {
                     </header>
                     <div className = "flex flex-col gap-2">
                         <section>
-                        description
+                        <strong>There are a few key aspects that we must keep in mind: </strong>
+                        <br />
+                        For instance, we must keep in mind the dangers of Effect, and how they may cause unneccessary re-renders. 
+                        The key difference is that useEffect is exected asynchronously after the component has rendered. useLayoutEffect 
+                        will fire synchronously after all DOM mutations but before the browser has painted the changes. 
                         </section>
                         <button className = "btn btn-neutral border-black btn-xsm" onClick = {() => setDummy(!dummy)}>
                             Button
