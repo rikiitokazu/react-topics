@@ -6,7 +6,17 @@ import { useState, useEffect, useLayoutEffect } from "react"
 export default function EffectLayout(): JSX.Element {
     const [dummy, setDummy] = useState(false)
     const [dummy2, setDummy2] = useState(false)
+    useEffect(() => {
+        // fetching api...
+        console.log("----useEffect")
+        return
+    },[])
 
+    useLayoutEffect(() => {
+        console.log('--useLayoutEffect')
+    },[])
+
+    console.log("pass")
 
     return (
         <div className = "">
@@ -41,8 +51,12 @@ export default function EffectLayout(): JSX.Element {
                         <strong>There are a few key aspects that we must keep in mind: </strong>
                         <br />
                         For instance, we must keep in mind the dangers of Effect, and how they may cause unneccessary re-renders. 
+                        If we update a state, it causes a re-render and commits to the DOM. If the useEffect also updates the state, this
+                        restarts the process from scratch. useEffect is after the DOM has been updated
                         The key difference is that useEffect is exected asynchronously after the component has rendered. useLayoutEffect 
                         will fire synchronously after all DOM mutations but before the browser has painted the changes. 
+                        One other situation you might want to use useLayoutEffect instead of useEffect is if you're updating a value
+                         (like a ref) and you want to make sure it's up-to-date before any other code runs
                         </section>
                         <button className = "btn btn-neutral border-black btn-xsm" onClick = {() => setDummy(!dummy)}>
                             Button
