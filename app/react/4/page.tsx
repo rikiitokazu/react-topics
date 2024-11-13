@@ -6,10 +6,10 @@ import { ErrorBoundary } from "react-error-boundary"
 
 export default function UseHook(): JSX.Element {
     const fetchData = (): Promise<string>=> {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             setTimeout(() => {
               console.log("1 seconds passed");
-              const randomNumber = Math.floor(Math.random() * 2)
+            //   const randomNumber = Math.floor(Math.random() * 2)
             //   if (randomNumber < 1) {
             //     reject("failed")
             //   }
@@ -33,10 +33,10 @@ export default function UseHook(): JSX.Element {
                     </header>
                     <div className = "flex flex-col gap-2">
                         <section>
-                            The "use" API lets you read the value of a resource like a Promise or a context. With a Context, 
-                            it can replace the useContext('context') method to access the provider valuess, and instead we can just to use. 
-                            This is better becaues this can be placed inside conditionals and doesn't behave like a normal hook. This is more 
-                            preferable, in that it doesn't have to be called at the top-level of the component
+                            The {"use"} API lets you read the value of a resource like a Promise or a context. With a Context, 
+                            it can replace the useContext({"content"}) method to access the provider valuess, and instead we can just to use. 
+                            This is better becaues this can be placed inside conditionals and {"doesn't"} behave like a normal hook. This is more 
+                            preferable, in that it {"doesn't"} have to be called at the top-level of the component
 
                         </section>
                         <button className = "btn btn-neutral border-black btn-xsm" onClick = {() => {}}>

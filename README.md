@@ -3,3 +3,6 @@
 2) useLayoutEffect vs useEffect
 3) useImperativeHandle (&forwardRef)
 4) use (with Suspense and ErrorBoundary)
+
+# TypeScript concepts
+1) Unions and Intersections
