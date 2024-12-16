@@ -6,3 +6,4 @@
 
 # TypeScript concepts
 1) Unions and Intersections
+2) Generics
