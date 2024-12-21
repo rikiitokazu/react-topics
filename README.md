@@ -8,3 +8,4 @@
 1) Unions and Intersections
 2) Generics
 3) Keyof, Typeof, and Index operations
+4) Conditional Types
