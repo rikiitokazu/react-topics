@@ -9,3 +9,4 @@
 2) Generics
 3) Keyof, Typeof, and Index operations
 4) Conditional Types
+5) Mapped Types
