@@ -7,3 +7,4 @@
 # TypeScript concepts
 1) Unions and Intersections
 2) Generics
+3) Keyof, Typeof, and Index operations

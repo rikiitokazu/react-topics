@@ -62,3 +62,14 @@ interface NumberOrStringDictionary {
     length: number; // Specific property: must be a number
     name: string; // Specific property: must be a string
   }
+
+
+// Indexed - access
+const arr = [
+    { name: "Alice", age: 25 }, 
+    { name: "Bob", age: 30 },
+    { name: "Charlie", age: 35 }
+]
+// lets say i want to get the type of the object in the array
+type T = typeof arr[number]
+// number is a type that represents the index of the array, so it has to be number
