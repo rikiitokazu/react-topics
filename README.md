@@ -4,7 +4,7 @@
 3) useImperativeHandle (&forwardRef)
 4) use (with Suspense and ErrorBoundary)
 
-# TypeScript concepts
+# TypeScript 
 1) Unions and Intersections
 2) Generics
 3) Keyof, Typeof, and Index operations
